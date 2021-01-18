@@ -6,34 +6,48 @@ html {
 
 body {
   font-family: "Roboto Condensed", sans-serif;
-  background: url(../images/background2.jpeg);
+  background: url(../images/background3.jpg);
 }
 
 #center-logo {
-  width: 33%;
   margin:0 auto;
 }
 
 #logo-container{
-  width: 375px;
-  height: 375px;
+  width: 345px;
+  height: 345px;
   padding: 10px;
   border-style: solid;
-  border-color: #4ca6bd;
+  border-color: #fff;
   border-width: 5px;
   border-radius: 50%;
   margin: 0 auto;
 }
 
 #logo-image {
-  background: url(../images/logo-1.png) no-repeat center center;
+  background: url(../images/logo-2.png) no-repeat center center;
   height: 100%;
   border-radius: 50%;
 }
 
-#welcome, p {
+#welcome {
     text-align: center;
-    font-size: 50px;
-    color: black;
+    font-size: 60px;
+    color: #fff;
+    text-decoration: underline;
+    text-shadow: 4px 3px 0px rgb(57, 118, 146);
 }
 
+.introduction p {
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#games-selector a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
