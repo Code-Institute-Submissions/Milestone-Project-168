@@ -9,6 +9,7 @@ body {
   background: url(../images/background3.jpg);
 }
 
+/*------------------------------------------------Logo */
 #center-logo {
   margin:0 auto;
 }
@@ -29,6 +30,8 @@ body {
   height: 100%;
   border-radius: 50%;
 }
+
+/*------------------------------------------------Website welcome and explanation */
 
 #welcome {
     text-align: center;
@@ -110,6 +113,8 @@ h3 {
   transform: rotateY(180deg);
 }
 
+/*------------------------------------------------Game timer and score box */
+
 #results {
     height: 85px;
     width: 450px;
@@ -119,3 +124,4 @@ h3 {
     margin-top: 15px;
     color: #fff;
 }
+
