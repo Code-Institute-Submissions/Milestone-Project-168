@@ -1,85 +1,108 @@
 const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
-let firstCard, secondCard;
-let firstClick = false;
+let firstCard = null;
+let secondCard = null;
+let firstClick = true;
+let flipping = false;
 let secs = 0;
 let currentGameMatches = 0;
 const levelOneMatches = 6;
 let timer;
 
-function flipCard() {
-  if (lockBoard) return;
-  if (this === firstCard) return;
-  if (!firstClick){
-    currentGameMatches = 0;
-    time();
-    };
-  firstClick = true;
-  this.classList.add('flip');
-  if (!hasFlippedCard) {
-    hasFlippedCard = true;
-    firstCard = this;
-    return;
-  }
-  secondCard = this;
-  checkForMatch();
- }
-function checkGameStatus(){
-    console.log('timer', secs, levelOneMatches);
-  // Check if time is over
-  let timerOver = false;
-  if (secs > 60){
-    timerOver = true;
-    clearInterval(timer);
-    secs = 0;
-  }
-  if (timerOver){
-    if (currentGameMatches == levelOneMatches){
-      alert('You won the game');
-      currentGameMatches = 0;
+function startGame() {
+    if (firstClick) {
+        time();
+        firstClick=false;
     }
-    else{
-      alert('You lost the game');
-      currentGameMatches = 0;
-    }
-  }
 }
-function checkForMatch() {
-  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-  isMatch ? disableCards() : unflipCards();
-  if (isMatch){
-    disableCards();
-    currentGameMatches = currentGameMatches +1;
-  }
-  let moves = document.querySelector('#moves').innerHTML
-  moves++
-  document.querySelector('#moves').innerHTML = moves;
-  checkGameStatus();
-}
-function disableCards() {
-  firstCard.removeEventListener('click', flipCard);
-  secondCard.removeEventListener('click', flipCard);
-  resetBoard();
-}
-function unflipCards() {
-  lockBoard = true;
-  setTimeout(() => {
+
+function unFlipCards() {
     firstCard.classList.remove('flip');
     secondCard.classList.remove('flip');
-    resetBoard();
-  }, 1000);
 }
-function resetBoard() {
-  [hasFlippedCard, lockBoard] = [false, false];
-  [firstCard, secondCard] = [null, null];
+
+function checkForMatch(firstCard, secondCard) {
+    return firstCard.dataset.framework ===
+    secondCard.dataset.framework;
 }
+
+function setCardsAsMatched() {
+    firstCard.classList.add('matched');
+    secondCard.classList.add('matched');
+}
+
+function disableCards() {
+    firstCard.removeEventListener('click', gamePlay);
+    secondCard.removeEventListener('click', gamePlay);
+}
+
+function resetFlippedCards() {
+    firstCard = null;
+    secondCard = null;
+    flipping = false;
+}
+
+function updateScore(score) {
+    document.querySelector('#score').innerHTML = score;
+}
+
+function updateMoves() {
+    let moves = document.querySelector('#moves').innerHTML
+    moves++
+    document.querySelector('#moves').innerHTML = moves;
+}
+
+function checkForWin(currentScore) {
+    return currentScore >= levelOneMatches;
+}
+
+function finishGame() {
+    if (checkForWin(currentGameMatches)) {
+        setTimeout(alert("Congratulations! You won the game!"), 1500);
+    } else {
+        alert("Sorry, you ran out of time. Have another try");
+    }
+    clearInterval(timer);
+}
+
+function gamePlay() {
+    startGame();
+    if (flipping === false) {
+        this.classList.add('flip');
+        if (firstCard!==null) {
+            flipping = true;
+            secondCard = this;
+            const match = checkForMatch(firstCard, secondCard);
+            if (match === true) {
+                disableCards();
+                currentGameMatches = currentGameMatches + 1;
+                updateScore(currentGameMatches);
+                if (checkForWin(currentGameMatches)) {
+                    finishGame();
+                }
+            } else {
+                setTimeout(unFlipCards, 1000);
+            }
+            updateMoves();
+            setTimeout(resetFlippedCards, 1000);
+            console.log("setting second card, match?", match);
+        } else {
+            firstCard = this;
+            console.log("setting first card");
+        }
+    } else {
+        return false;
+    }
+}
+
 (function shuffle() {
   cards.forEach(card => {
     let randomPos = Math.floor(Math.random() * 12);
     card.style.order = randomPos;
   });
 })();
+
 function time() {
     let mins = 0
     let SS
@@ -92,5 +115,7 @@ function time() {
         
         document.querySelector('#time').innerHTML = `${MM}:${SS}`;
     }, 1000);
+    setTimeout(finishGame, 60000);
 }
-cards.forEach(card => card.addEventListener('click', flipCard));
+
+cards.forEach(card => card.addEventListener('click', gamePlay));
