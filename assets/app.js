@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('.memory-card');
+const cards = document.querySelectorAll('.memory-card-lv1', '.memory-card-lv2');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard = null;
@@ -8,6 +8,7 @@ let flipping = false;
 let secs = 0;
 let currentGameMatches = 0;
 const levelOneMatches = 6;
+const levelTwoMatches = 8;
 let timer;
 
 function startGame() {
