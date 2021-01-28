@@ -55,7 +55,7 @@ body {
     align-items: center;
 }
 
-/*------------------------------------------------Memory cards game - level 1 & 2 */
+/*------------------------------------------------Memory cards explanation - level 1 & 2 */
 
 h3 {
     text-decoration: underline;
@@ -69,17 +69,25 @@ h3 {
     padding: 20px;
 }
 
-.game-grid-lv1 {
-    width: 600px;
-    height: 600px;
+/*------------------------------------------------Memory cards gameboard & cards - level 1 & 2 */
+
+.game-board {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.3em;
 }
 
-.game-grid-lv2 {
-    width: 600px;
-    height: 600px;
+.game-grid-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.game-grid-lv1, .game-grid-lv2 {
+.game-grid {
+    width: 600px;
+    height: 600px;
     margin: auto;
     border-radius: 10px;
     padding: 8px;
@@ -88,14 +96,15 @@ h3 {
 }
 
 .memory-card {
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
+  width: 7em;
+  height: 8.5em;
   margin: 5px;
-  position: relative;
+  border-radius: 0.3em;
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
   box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  cursor: pointer;
 }
 
 .memory-card:active {
@@ -134,22 +143,25 @@ h3 {
     color: #fff;
 }
 
-/*------------------------------------------------Media screens */
+.return-button {
+    max-width: 50%;
+    margin: 1.5em auto;
+    text-align: center;
+    padding: 0.7em 1.4em;
+}
 
-@media screen and (max-width: 580px){
-    .game-grid-lv1, .game-grid-lv2 {
-       width: 380px;
-       height: 380px;
-       margin-left: auto;
-       margin-right: auto; 
+/*------------------------------------------------Media Queries */
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .memory-card {
+        width: 4em;
+        height: 4em;
     }
 }
 
-@media screen and (max-width: 580px){
-    #results {
-        height: 85px;
-        width: 350px;
-        margin-left: auto;
-        margin-right: auto;
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .memory-card {
+        width: 4.5em;
+        height: 4.5em;
     }
 }
