@@ -161,17 +161,23 @@ h3 {
     padding: 0.7em 1.4em;
 }
 
+/*------------------------------------------------Footer */
+
+footer {
+    border-top: 1px solid #fff;
+}
+
 /*------------------------------------------------Media Queries */
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
     .memory-card {
-        width: 4em;
+        width: 3.5em;
         height: 4em;
     }
 
-    .game-grid {
-        width: 380px;
-        height: 380px; 
+    .game-board {
+        margin-left: auto;
+        margin-right: auto; 
     }
 }
 
@@ -181,8 +187,26 @@ h3 {
         height: 4.5em;
     }
 
-    .game-grid {
-        width: 380px;
-        height: 380px; 
+    .game-board {
+        width: 5.5em;
+        height: 5.5em;
+        margin-left: auto;
+        margin-right: auto; 
     }
 }
+
+@media only screen and (min-width: 992px) {
+    .memory-card  {
+        width: 6em;
+        height: 6em;
+    }
+}
+
+@media screen and (max-width: 580px){
+    #results {
+        height: 85px;
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+} 
