@@ -80,9 +80,9 @@ function calculateCurrentLevel() {
 
 function finishGame() {
     if (checkForWin(currentGameMatches)) {
-        setTimeout(alert("Congratulations! You won the game!"), 1500);
+        setTimeout(alert("Congratulations! 🎉 You won the game! 🎉 Press 'OK' and then you can 'Play Again' or choose a different level 😄"), 1500);
     } else {
-        alert("Sorry, you ran out of time. Have another try");
+        alert("Sorry, you ran out of time. ⌛ To have another try, press 'OK' and then you can 'Play Again' or choose a different level");
         disableAllCards();
     }
     clearInterval(timer);
@@ -118,9 +118,16 @@ function gamePlay() {
     }
 }
 
-(function shuffle() {
+(function shuffleLevel1() {
   cards.forEach(card => {
     let randomPos = Math.floor(Math.random() * 12);
+    card.style.order = randomPos;
+  });
+})();
+
+(function shuffleLevel2() {
+  cards2.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 14);
     card.style.order = randomPos;
   });
 })();

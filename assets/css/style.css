@@ -69,6 +69,12 @@ h3 {
     padding: 20px;
 }
 
+.smiley-face {
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+
 /*------------------------------------------------Memory cards gameboard & cards - level 1 & 2 */
 
 .game-board {
@@ -162,8 +168,10 @@ h3 {
 }
 
 #happy-slogan {
-    height: auto;
-    width: auto;
+    background: url(../images/be-happy.png) no-repeat center center; 
+    height: 200px;
+    width: 400px;
+    margin: 0 auto;
 }
 
 /*------------------------------------------------Footer */
