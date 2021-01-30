@@ -159,7 +159,7 @@ h3 {
 /*------------------------------------------------Game timer and score box */
 
 #results {
-    height: 85px;
+    height: 95px;
     width: 450px;
     border: 4px solid #fff;
     margin: auto;
@@ -231,7 +231,17 @@ footer {
     }
 } 
 
-@media screen and (max-width: 375px){
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+    #logo-container {
+        width: 300px;
+        height: 300px;
+        padding: 5px;
+    }
+
     #welcome {
         font-size: 45px;
     }
@@ -241,24 +251,39 @@ footer {
     }
 
     #results {
-        height: 85px;
-        width: 330px;
+        height: 115px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 10px;
+    }
+
+    .memory-card-lv1 {
+        width: 4.3em;
+        height: 8.3em;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .memory-card-lv1 {
-        width: 4.5em;
-        height: 8.3em;
+    .front-face,
+    .back-face {
+        border-radius: 1px;
+        padding: 2px;
     }
 
     .memory-card-lv2 {
-        width: 4.5em;
+        width: 4.3em;
         height: 7em;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .game-board, .game-grid {
         width: 97%;
         height: 97%;
+    }
+
+    #happy-slogan {
+        width: 100%;
     }
 } 
