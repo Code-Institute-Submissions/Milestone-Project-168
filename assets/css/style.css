@@ -60,7 +60,8 @@ body {
     background: url(../images/be-happy.png) no-repeat center center; 
     height: 200px;
     width: 400px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*------------------------------------------------Memory cards explanation - level 1 & 2 */
@@ -191,6 +192,18 @@ footer {
         font-size: 45px;
     }
 
+    .introduction p, a {
+        font-size: 19px;
+    }
+
+    .level-explanation {
+        font-size: 18px;
+    }
+
+    #happy-slogan {
+        width: 90%;
+    }
+
     #results {
         height: 85px;
         width: 350px;
@@ -215,5 +228,37 @@ footer {
 
     footer {
         padding: 0;
+    }
+} 
+
+@media screen and (max-width: 375px){
+    #welcome {
+        font-size: 45px;
+    }
+    
+    #game-title {
+        font-size: 40px;
+    }
+
+    #results {
+        height: 85px;
+        width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .memory-card-lv1 {
+        width: 4.5em;
+        height: 8.3em;
+    }
+
+    .memory-card-lv2 {
+        width: 4.5em;
+        height: 7em;
+    }
+
+    .game-board, .game-grid {
+        width: 97%;
+        height: 97%;
     }
 } 
