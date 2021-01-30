@@ -1,3 +1,5 @@
+// Game variables
+
 const cards = document.querySelectorAll('.memory-card-lv1');
 const cards2 = document.querySelectorAll('.memory-card-lv2');
 let hasFlippedCard = false;
@@ -11,6 +13,8 @@ let currentGameMatches = 0;
 const levelOneMatches = 6;
 const levelTwoMatches = 8;
 let timer;
+
+// Game funtions, to start the game, flip (or unflip), match cards & lock board
 
 function startGame() {
     if (firstClick) {
@@ -50,6 +54,8 @@ function resetFlippedCards() {
     flipping = false;
 }
 
+// Score, noves and winning the game functions
+
 function updateScore(score) {
     document.querySelector('#score').innerHTML = score;
 }
@@ -78,6 +84,8 @@ function calculateCurrentLevel() {
     } 
 }
 
+// Alerts when game won or time run out
+
 function finishGame() {
     if (checkForWin(currentGameMatches)) {
         setTimeout(alert("Congratulations! 🎉 You won the game! 🎉 Press 'OK' and then you can 'Play Again' or choose a different level 😄"), 1500);
@@ -87,6 +95,8 @@ function finishGame() {
     }
     clearInterval(timer);
 }
+
+// Main Game Play
 
 function gamePlay() {
     startGame();
@@ -118,6 +128,8 @@ function gamePlay() {
     }
 }
 
+// Shuffling the cards depending on level
+
 (function shuffleLevel1() {
   cards.forEach(card => {
     let randomPos = Math.floor(Math.random() * 12);
@@ -131,6 +143,8 @@ function gamePlay() {
     card.style.order = randomPos;
   });
 })();
+
+// setting the time function - 60 seconds to finish the game
 
 function time() {
     let mins = 0
@@ -146,6 +160,8 @@ function time() {
     }, 1000);
     setTimeout(finishGame, 60000);
 }
+
+// Event listeners
 
 cards.forEach(card => card.addEventListener('click', gamePlay));
 cards2.forEach(card => card.addEventListener('click', gamePlay));

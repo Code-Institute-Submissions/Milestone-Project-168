@@ -31,9 +31,10 @@ body {
     border-radius: 50%;
 }
 
-/*------------------------------------------------Website welcome and explanation */
+/*------------------------------------------------Homepage */
 
-#welcome {
+#welcome,
+#game-title {
     text-align: center;
     font-size: 60px;
     color: #fff;
@@ -41,7 +42,7 @@ body {
     text-shadow: 4px 3px 0px rgb(57, 118, 146);
 }
 
-.introduction p {
+.introduction p, a {
     text-align: center;
     font-size: 22px;
     color: #fff;
@@ -53,6 +54,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#happy-slogan {
+    background: url(../images/be-happy.png) no-repeat center center; 
+    height: 200px;
+    width: 400px;
+    margin: 0 auto;
 }
 
 /*------------------------------------------------Memory cards explanation - level 1 & 2 */
@@ -78,7 +86,6 @@ h3 {
 /*------------------------------------------------Memory cards gameboard & cards - level 1 & 2 */
 
 .game-board {
-    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 0.3em;
@@ -167,13 +174,6 @@ h3 {
     padding: 0.7em 1.4em;
 }
 
-#happy-slogan {
-    background: url(../images/be-happy.png) no-repeat center center; 
-    height: 200px;
-    width: 400px;
-    margin: 0 auto;
-}
-
 /*------------------------------------------------Footer */
 
 footer {
@@ -182,44 +182,38 @@ footer {
 
 /*------------------------------------------------Media Queries */
 
-@media only screen and (min-width: 600px) and (max-width: 767px) {
-    .memory-card {
-        width: 3.5em;
-        height: 4em;
-    }
-
-    .game-board {
-        margin-left: auto;
-        margin-right: auto; 
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .memory-card {
-        width: 4.5em;
-        height: 4.5em;
-    }
-
-    .game-board {
-        width: 5.5em;
-        height: 5.5em;
-        margin-left: auto;
-        margin-right: auto; 
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .memory-card  {
-        width: 6em;
-        height: 6em;
-    }
-}
-
 @media screen and (max-width: 580px){
+    #welcome {
+        font-size: 50px;
+    }
+    
+    #game-title {
+        font-size: 45px;
+    }
+
     #results {
         height: 85px;
         width: 350px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .memory-card-lv1 {
+        width: 4.7em;
+        height: 8.5em;
+    }
+
+    .memory-card-lv2 {
+        width: 4.7em;
+        height: 7em;
+    }
+
+    .game-board, .game-grid {
+        width: 95%;
+        height: 95%;
+    }
+
+    footer {
+        padding: 0;
     }
 } 
