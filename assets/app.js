@@ -2,17 +2,17 @@
 
 const cards = document.querySelectorAll('.memory-card-lv1');
 const cards2 = document.querySelectorAll('.memory-card-lv2');
-let hasFlippedCard = false;
-let lockBoard = false;
-let firstCard = null;
-let secondCard = null;
-let firstClick = true;
-let flipping = false;
-let secs = 0;
-let currentGameMatches = 0;
+var hasFlippedCard = false;
+var lockBoard = false;
+var firstCard = null;
+var secondCard = null;
+var firstClick = true;
+var flipping = false;
+var secs = 0;
+var currentGameMatches = 0;
 const levelOneMatches = 6;
 const levelTwoMatches = 8;
-let timer;
+var timer;
 
 // Game funtions, to start the game, flip (or unflip), match cards & lock board
 
@@ -61,7 +61,7 @@ function updateScore(score) {
 }
 
 function updateMoves() {
-    let moves = document.querySelector('#moves').innerHTML
+    var moves = document.querySelector('#moves').innerHTML
     moves++
     document.querySelector('#moves').innerHTML = moves;
 }
@@ -76,7 +76,7 @@ function checkForWin(currentScore) {
 }
 
 function calculateCurrentLevel() {
-    let currentLevel = document.querySelector('table.game-board').getAttribute('id');
+    var currentLevel = document.querySelector('table.game-board').getAttribute('id');
     if (currentLevel === 'level1') {
         return 1;
     } else {
@@ -132,14 +132,14 @@ function gamePlay() {
 
 (function shuffleLevel1() {
   cards.forEach(card => {
-    let randomPos = Math.floor(Math.random() * 12);
+    var randomPos = Math.floor(Math.random() * 12);
     card.style.order = randomPos;
   });
 })();
 
 (function shuffleLevel2() {
   cards2.forEach(card => {
-    let randomPos = Math.floor(Math.random() * 14);
+    var randomPos = Math.floor(Math.random() * 14);
     card.style.order = randomPos;
   });
 })();
@@ -147,9 +147,9 @@ function gamePlay() {
 // setting the time function - 60 seconds to finish the game
 
 function time() {
-    let mins = 0
-    let SS
-    let MM
+    var mins = 0
+    var SS
+    var MM
     timer = setInterval(() => {
         secs++
         if(secs==60){secs=0; mins++}
