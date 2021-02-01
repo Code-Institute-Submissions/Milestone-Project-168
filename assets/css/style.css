@@ -57,7 +57,7 @@ body {
 }
 
 #happy-slogan {
-    background: url(../images/be-happy.png) no-repeat center center; 
+    background: url(../images/bee-happy-blue.png) no-repeat center center; 
     height: 200px;
     width: 400px;
     margin-left: auto;
@@ -145,9 +145,9 @@ h3 {
 .back-face {
     width: 100%;
     height: 100%;
-    padding: 5px;
+    padding: 1px;
     position: absolute;
-    border-radius: 2px;
+    border-radius: 5px;
     background: rgb(255, 255, 255);
     backface-visibility: hidden;
 }
@@ -161,7 +161,7 @@ h3 {
 #results {
     height: 95px;
     width: 450px;
-    border: 4px solid #fff;
+    border: 2px solid #fff;
     margin: auto;
     text-align: center;
     margin-top: 15px;
@@ -212,18 +212,33 @@ footer {
     }
 
     .memory-card-lv1 {
-        width: 4.7em;
-        height: 8.5em;
+        width: 5em;
+        height: 8.8em;
+        margin: 5px;
+        padding: 0;
     }
 
     .memory-card-lv2 {
-        width: 4.7em;
-        height: 7em;
+        width: 5em;
+        height: 7.3em;
+        margin: 3px;
+        padding: 0;
     }
 
     .game-board, .game-grid {
         width: 95%;
         height: 95%;
+        padding: 0;
+    }
+
+    .memory-card-lv1:active, 
+    .memory-card-lv2:active {
+        transform: scale(0.95);
+        transition: transform .3s;
+    }
+
+    .game-grid-row {
+        margin: auto;
     }
 
     footer {
@@ -231,9 +246,7 @@ footer {
     }
 } 
 
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px) {
+@media only screen and (max-width: 320px) {
     
     #logo-container {
         width: 300px;
@@ -259,22 +272,16 @@ footer {
 
     .memory-card-lv1 {
         width: 4.3em;
-        height: 8.3em;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .front-face,
-    .back-face {
-        border-radius: 1px;
-        padding: 2px;
+        height: 8em;
+        margin: 3px;
+        padding: 0;
     }
 
     .memory-card-lv2 {
         width: 4.3em;
         height: 7em;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 3px;
+        padding: 0;
     }
 
     .game-board, .game-grid {
