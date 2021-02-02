@@ -74,7 +74,7 @@ The pages as shown on a mobile wireframes:
 -   [Responsinator:](http://www.responsinator.com/) Responsinator was used to check the site was responsive across all devices.
 -   [Balsamiq:](https://balsamiq.com/) Balsamiq was used to create the wireframes during the design process.
 -   [Autoprefixer CSS online](https://autoprefixer.github.io/) Autoprefixer was used to get the correct web extensions like -webkit- added to my CSS so that it worked on IOs systems.
--   Chrome browser & Microsoft Edge.
+-   Chrome, Microsoft Edge & Firefox internet browsers.
 -   Adobe Photoshop, for the logo.
 
 
@@ -108,8 +108,16 @@ JSHint was used to check there were no errors or potential problems in the JavaS
 -   The website was viewed on a variety of devices such as Desktop, Laptop and a variety of iPhones & Android phones to check it loaded correctly.
 -   The website was tested on Responsinator to ensure responsiveness on all devices.
 -   A large amount of testing was done to ensure that all pages were linking correctly. This was done by frequently moving from one page by clicking the button links for all pages on all devices.
--   
+-   A large amount of testing of the game functions was completed during developement. After every change the game was tested to ensure no new issues or bugs were located.
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues, they reported a success on all fronts.
+
+Problems that needed to be overcome:
+
+- Matching the cards - used frameworks to name each card image and created code that checked the frame work names to know if the cards matched or not.
+- The game timer function triggering with the first click only and not every time a card was clicked. Overcame with 'var firstClick = false' in app.js.
+- The board needed to be locked after clicking on the 2 cards to be 'flipped' or else a user could keep 'flipping' the cards before the match function could be executed, which is why a lockBoard variable was needed. Also needed to create a 'disableAllCards' funtion for when the game is won or lost so the user cant keep playing and needs to select to play again or a new level.
+- With the addition of a Level 2 the 'const cards' variable wasnt triggering for the level 2 cards, to overcome this a 'cards2' was created and another event listener. Another level 2 issues was that the number of pairs needed to completed the game had to be increased from 6 to 8, so a level1 or level2 ID was given and these targeted using 'getAttribute('id')' and 'levelOneMatches' and 'levelTwoMatches' variables created.
+- Issues with the site working on IOS mobile devices as the CSS wasnt loading correctly for the game, the cards wouldnt 'flip' correctly. Solved this by running the appropriate CSS through 'Autoprefixer' (as linked to above) and adding the webkit options to the code for IOS software.
 
 ## Known Bugs
 

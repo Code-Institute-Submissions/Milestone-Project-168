@@ -200,70 +200,9 @@ footer {
 
 /*------------------------------------------------Media Queries */
 
-@media screen and (max-width: 580px){
-    #welcome {
-        font-size: 50px;
-    }
-    
-    #game-title {
-        font-size: 45px;
-    }
-
-    .introduction p, a {
-        font-size: 19px;
-    }
-
-    .level-explanation {
-        font-size: 18px;
-    }
-
-    #happy-slogan {
-        width: 90%;
-    }
-
-    #results {
-        height: 85px;
-        width: 350px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .memory-card-lv1 {
-        width: 4.5em;
-        height: 8.8em;
-        margin: 5px;
-        padding: 0;
-    }
-
-    .memory-card-lv2 {
-        width: 4.5em;
-        height: 7.3em;
-        margin: 3px;
-        padding: 0;
-    }
-
-    .game-board, .game-grid {
-        width: 95%;
-        height: 95%;
-        padding: 0;
-    }
-
-    .memory-card-lv1:active, 
-    .memory-card-lv2:active {
-        transform: scale(0.95);
-        transition: transform .3s;
-    }
-
-    .game-grid-row {
-        margin: auto;
-    }
-
-    footer {
-        padding: 0;
-    }
-} 
-
-@media only screen and (max-width: 320px) {
+@media only screen 
+and (min-width: 320px) 
+and (max-width: 767.98px)  {
     
     #logo-container {
         width: 300px;
@@ -290,20 +229,24 @@ footer {
     .memory-card-lv1 {
         width: 4em;
         height: 8em;
-        margin: 2.5px;
+        margin: 2px;
         padding: 0;
     }
 
     .memory-card-lv2 {
         width: 4em;
         height: 7em;
-        margin: 2.5px;
+        margin: 2px;
         padding: 0;
     }
 
     .game-board, .game-grid {
         width: 95%;
         height: 95%;
+    }
+
+    footer {
+        padding: 0;
     }
 
     #happy-slogan {
