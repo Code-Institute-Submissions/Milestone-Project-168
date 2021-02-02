@@ -9,14 +9,14 @@ All human beings can procratinate, therefore I decided to call my website a play
 ## User stories
 
 - #### Site user goals
-    1. As site user, I want 
-    2. As site user, I want 
-    3. 
+    1. As a site user, I want to navigate the site easily and understand what the site is offering.
+    2. As a site user, I want to be entertained by the games on offer, they should be fully interactive and I should be able to see how I am doing at all times, as well as being told if I win or lose.
+    3. As a site user, I want to be able to increase the difficulty of the game or make it more challanging by the use of levels or something.
 
 - #### Site owner goals
-    1. As a site owner, I want 
-    2. As a site owner, I want 
-    3. 
+    1. As a site owner, I want to provide a clear website that is easy to navigate and read all text/info, with no distractions or broken links etc.
+    2. As a site owner, I want the games to be fun to play, but quite simple. I want the user to feel challenged but not frustrated.
+    3. As a site owner, I want the games to be interactive and to provide feedback to the user. I want the difficulty to increase with the inclusion of a level 2, with the view to creating more games and more levels in the future.
 
 -   ### Design
     -   #### Colour Scheme
@@ -51,9 +51,9 @@ The pages as shown on a mobile wireframes:
 
 -   Home-page: This page is the landing page when you visit the site, so it needed to be clear about what the website was about. There are clear option buttons which allows the user to navigate the site easily.
 
--   Memory Card Level 1: 
+-   Memory Card Level 1: this page is the first level of the memory card game, so there is an explanation of what a memory card game is and the rules/theme for level 1. The game grid then sits below this (with 12 cards, 6 pairs) and the game timer starts when the first card is clicked as per the explanation. The score/moves/time is shown so the user can be aware of their progress the whole game. They can then play again, move to the next level or return to the main menu page.
 
--   Memory Card Level 1: 
+-   Memory Card Level 1: this page is the second level of the memory card game. It also has the explanation of the memory card game and the rules/theme for level 2. The game grid and score/time box are in the same position but the game grid contains 4 more cards to make 8 total pairs, to increase the difficulty with the same time limit as level 1.
 
 ### Future Features
 -   I would like to create and add more games using vanilla JavaScript, which is why I left a 'more games coming soon button' to let the users know that if they liked this site to keep coming back to see what new games will be added in the future. I did follow a online tutorial to create a 'Snake' game using JavaScript, however I didn't think it was necessary to add that to this website currently as I am not advanced enough yet to develop the basic game idea further and customize it. But in the future games like 'Snake' and 'Naughts & Crosses' could be added to the games inventory for this site.
@@ -73,6 +73,7 @@ The pages as shown on a mobile wireframes:
 -   [Git:](https://git-scm.com/) Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 -   [Responsinator:](http://www.responsinator.com/) Responsinator was used to check the site was responsive across all devices.
 -   [Balsamiq:](https://balsamiq.com/) Balsamiq was used to create the wireframes during the design process.
+-   [Autoprefixer CSS online](https://autoprefixer.github.io/) Autoprefixer was used to get the correct web extensions like -webkit- added to my CSS so that it worked on IOs systems.
 -   Chrome browser & Microsoft Edge.
 -   Adobe Photoshop, for the logo.
 
@@ -81,27 +82,30 @@ The pages as shown on a mobile wireframes:
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
+JSHint was used to check there were no errors or potential problems in the JavaScript code.
 
 ### Testing User Stories from User Experience (UX) Section
 
 - #### Site user goals
-    1. As site user, I want 
+    1. As a site user, I want to navigate the site easily and understand what the site is offering.
         -   Upon entering the site 
-    2. As a site user, I want 
+    2. As a site user, I want to be entertained by the games on offer, they should be fully interactive and I should be able to see how I am doing at all times, as well as being told if I win or lose. 
         -   The 
-    3. 
+    3. As a site user, I want to be able to increase the difficulty of the game or make it more challanging by the use of levels or something.
+        -   The 
 
 - #### Site owner goals
-    1. As a site owner, I want 
+    1. As a site owner, I want to provide a clear website that is easy to navigate and read all text/info, with no distractions or broken links etc. 
         -   The 
-    2. As a site owner, I want 
+    2. As a site owner, I want the games to be fun to play, but quite simple. I want the user to feel challenged but not frustrated.
         -   The 
-    3.  
+    3. As a site owner, I want the games to be interactive and to provide feedback to the user. I want the difficulty to increase with the inclusion of a level 2, with the view to creating more games and more levels in the future.
+        -   The
 
 ### Further Testing
 
 -   The Website was tested on Google Chrome, Microsoft Edge and FireFox browsers to check it loaded correctly.
--   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7 Plus & Android phones to check it loaded correctly.
+-   The website was viewed on a variety of devices such as Desktop, Laptop and a variety of iPhones & Android phones to check it loaded correctly.
 -   The website was tested on Responsinator to ensure responsiveness on all devices.
 -   A large amount of testing was done to ensure that all pages were linking correctly. This was done by frequently moving from one page by clicking the button links for all pages on all devices.
 -   
@@ -173,13 +177,21 @@ There is also clear code commenting in the CSS & JavaScript sections. Each secti
 
 Online tutorials:
 
+- The initial game design and the CSS 'flip' animation, with the backface/frontface images, was taken from viewing the tutorial by Youtube user [freeCodeCamp.org](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=330s). However during the middle of the project mentor session, we refractored and simplified alot of the JavaScript code from this video so it doesnt match this exactly anymore, but the basic game did grow from this source.
+
+- The Function time() was taken from this online video created by Youtube user [codeTonight](https://www.youtube.com/watch?v=QrTCHHhoUQU)
+
+- I took some inspiration from these guides also; first by [Sandra Israel-Ovirih](https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript) and the second, also based on the first, by [Michelle Aniuchi](https://aadaobi.medium.com/building-a-memory-matching-game-in-javascript-48e792c7b563).
+
 [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used during the project.
 
 ### Media
 
 I created the logo for the site using Adobe Photoshop.
 
-The images for the background and Memory card game used in this site were obtained from Google/images. 
+The 'bee happy' slogan was taken from [Google images](https://www.google.co.uk/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F630785491557264850%2F&psig=AOvVaw1PJlhki4Q-ZaiB_eyynMaH&ust=1612361458061000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPCwtNewy-4CFQAAAAAdAAAAABAD) and the colour changed using 'Paint 3D' to suit the site.
+
+The images for the background and the Memory card game levels used in this site were obtained from Google/images. 
 
 [Background image](https://www.wallpaperup.com/2240/Abstract_blue_circles.html)
 

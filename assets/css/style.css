@@ -290,20 +290,20 @@ footer {
     .memory-card-lv1 {
         width: 4em;
         height: 8em;
-        margin: 3px;
+        margin: 2.5px;
         padding: 0;
     }
 
     .memory-card-lv2 {
         width: 4em;
         height: 7em;
-        margin: 3px;
+        margin: 2.5px;
         padding: 0;
     }
 
     .game-board, .game-grid {
-        width: 97%;
-        height: 97%;
+        width: 95%;
+        height: 95%;
     }
 
     #happy-slogan {
