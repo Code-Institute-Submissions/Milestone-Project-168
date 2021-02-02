@@ -123,22 +123,37 @@ h3 {
 .memory-card-lv2 {
     margin: 5px;
     border-radius: 0.3em;
-    transform: scale(1);
-    transform-style: preserve-3d;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    -o-transition: transform .5s;
     transition: transform .5s;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    transition: transform .5s, -webkit-transform .5s;
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+            box-shadow: 1px 1px 1px rgba(0,0,0,.3);
     cursor: pointer;
 }
 
 .memory-card-lv1:active, 
 .memory-card-lv2:active {
-    transform: scale(0.97);
+    -webkit-transform: scale(0.97);
+        -ms-transform: scale(0.97);
+            transform: scale(0.97);
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    -o-transition: transform .2s;
     transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
 }
 
 .memory-card-lv1.flip,
 .memory-card-lv2.flip {
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
 }
 
 .front-face,
@@ -149,11 +164,13 @@ h3 {
     position: absolute;
     border-radius: 5px;
     background: rgb(255, 255, 255);
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 }
 
 .front-face {
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
 }
 
 /*------------------------------------------------Game timer and score box */
@@ -212,14 +229,14 @@ footer {
     }
 
     .memory-card-lv1 {
-        width: 5em;
+        width: 4.5em;
         height: 8.8em;
         margin: 5px;
         padding: 0;
     }
 
     .memory-card-lv2 {
-        width: 5em;
+        width: 4.5em;
         height: 7.3em;
         margin: 3px;
         padding: 0;
@@ -271,14 +288,14 @@ footer {
     }
 
     .memory-card-lv1 {
-        width: 4.3em;
+        width: 4em;
         height: 8em;
         margin: 3px;
         padding: 0;
     }
 
     .memory-card-lv2 {
-        width: 4.3em;
+        width: 4em;
         height: 7em;
         margin: 3px;
         padding: 0;
