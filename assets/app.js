@@ -2,8 +2,6 @@
 
 const cards = document.querySelectorAll('.memory-card-lv1');
 const cards2 = document.querySelectorAll('.memory-card-lv2');
-var hasFlippedCard = false;
-var lockBoard = false;
 var firstCard = null;
 var secondCard = null;
 var firstClick = true;
@@ -33,11 +31,6 @@ function checkForMatch(firstCard, secondCard) {
     secondCard.dataset.framework;
 }
 
-function setCardsAsMatched() {
-    firstCard.classList.add('matched');
-    secondCard.classList.add('matched');
-}
-
 function disableCards() {
     firstCard.removeEventListener('click', gamePlay);
     secondCard.removeEventListener('click', gamePlay);
@@ -61,13 +54,13 @@ function updateScore(score) {
 }
 
 function updateMoves() {
-    var moves = document.querySelector('#moves').innerHTML
-    moves++
+    var moves = document.querySelector('#moves').innerHTML;
+    moves++;
     document.querySelector('#moves').innerHTML = moves;
 }
 
 function checkForWin(currentScore) {
-    level = calculateCurrentLevel();
+    var level = calculateCurrentLevel();
     if (level === 1) {
         return currentScore >= levelOneMatches;
     } else {
@@ -88,9 +81,9 @@ function calculateCurrentLevel() {
 
 function finishGame() {
     if (checkForWin(currentGameMatches)) {
-        setTimeout(alert("Congratulations! 🎉 You won the game! 🎉 Press 'OK' and then you can 'Play Again' or choose a different level 😄"), 1500);
+        setTimeout(alert("Congratulations! 🎉 You won the game! 🎉 Close this window and then you can 'Play Again' or choose a different level 😄"), 1500);
     } else {
-        alert("Sorry, you ran out of time. ⌛ To have another try, press 'OK' and then you can 'Play Again' or choose a different level");
+        alert("Sorry, you ran out of time. ⌛ To have another try, close this window and then you can 'Play Again' or choose a different level");
         disableAllCards();
     }
     clearInterval(timer);
@@ -147,14 +140,14 @@ function gamePlay() {
 // setting the time function - 60 seconds to finish the game
 
 function time() {
-    var mins = 0
-    var SS
-    var MM
+    var mins = 0;
+    var SS;
+    var MM;
     timer = setInterval(() => {
-        secs++
+        secs++;
         if(secs==60){secs=0; mins++}
-        secs<10?SS=`0${secs}`:SS=`${secs}`
-        mins<10?MM=`0${mins}`:SS=`${mins}`
+        secs<10?SS=`0${secs}`:SS=`${secs}`;
+        mins<10?MM=`0${mins}`:SS=`${mins}`;
         
         document.querySelector('#time').innerHTML = `${MM}:${SS}`;
     }, 1000);

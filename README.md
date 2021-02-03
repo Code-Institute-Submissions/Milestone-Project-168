@@ -6,6 +6,17 @@
 I wanted to create a game website to provide some amusement and distraction for people who suffer from stress and bordom in their busy lives. I beleive it is sometimes easier to focus on the important work/studies if you acknowledge that some fun is necessary and create time and space to indulge in a bit of procrastination.
 All human beings can procratinate, therefore I decided to call my website a play on that word and the nation: Procrast-A-Nation.
 
+So far the site consists of a Memory Card matching game, which has 2 levels. A memory card game is basically a grid of paired cards in a random order, face-down. The user needs to turn the cards over and match each pair to win. 
+
+## The important things to consider were:
+
+1. The game should be timed so the user knows how long it takes them, but also for increased difficulty they will have a time limit to match all the cards. The time also needs to stop when the game is over or when the user has won.
+2. The cards needed to be shuffled randomly for each new game, so the user cannot predict where each one will be.
+3. The game needs to know when the cards are matched or not and what to do with them for either scenario.
+4. The user should be able to see how many pairs they have made as a 'score' and how many times they have flipped the cards as a 'move' counter.
+5. The user should be able to restart the game at any time, which would reset the game and re-shuffle the cards randomly.
+6. There should be some way of informing the user when they have won, or if they have lost by running out of time.
+
 ## User stories
 
 - #### Site user goals
@@ -53,7 +64,7 @@ The pages as shown on a mobile wireframes:
 
 -   Memory Card Level 1: this page is the first level of the memory card game, so there is an explanation of what a memory card game is and the rules/theme for level 1. The game grid then sits below this (with 12 cards, 6 pairs) and the game timer starts when the first card is clicked as per the explanation. The score/moves/time is shown so the user can be aware of their progress the whole game. They can then play again, move to the next level or return to the main menu page.
 
--   Memory Card Level 1: this page is the second level of the memory card game. It also has the explanation of the memory card game and the rules/theme for level 2. The game grid and score/time box are in the same position but the game grid contains 4 more cards to make 8 total pairs, to increase the difficulty with the same time limit as level 1.
+-   Memory Card Level 2: this page is the second level of the memory card game. It also has the explanation of the memory card game and the rules/theme for level 2. The game grid and score/time box are in the same position but the game grid contains 4 more cards to make 8 total pairs, to increase the difficulty with the same time limit as level 1.
 
 ### Future Features
 -   I would like to create and add more games using vanilla JavaScript, which is why I left a 'more games coming soon button' to let the users know that if they liked this site to keep coming back to see what new games will be added in the future. I did follow a online tutorial to create a 'Snake' game using JavaScript, however I didn't think it was necessary to add that to this website currently as I am not advanced enough yet to develop the basic game idea further and customize it. But in the future games like 'Snake' and 'Naughts & Crosses' could be added to the games inventory for this site.
@@ -66,7 +77,6 @@ The pages as shown on a mobile wireframes:
 
 ### Frameworks, Libraries & Programs Used
 
--   I also made use of the [Bootstrap framework library](https://getbootstrap.com/).
 -   [Google Fonts:](https://fonts.google.com/) Google fonts were used to import the 'Roberto Condensed' font into the style.css file which is used on all pages throughout the project.
 -   [Font Awesome:](https://fontawesome.com/) Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 -   [GitHub:](https://github.com/) GitHub is used to store the projects code after being pushed from Git.
@@ -76,31 +86,42 @@ The pages as shown on a mobile wireframes:
 -   [Autoprefixer CSS online](https://autoprefixer.github.io/) Autoprefixer was used to get the correct web extensions like -webkit- added to my CSS so that it worked on IOs systems.
 -   Chrome, Microsoft Edge & Firefox internet browsers.
 -   Adobe Photoshop, for the logo.
+-   I also made use of the [Bootstrap framework library](https://getbootstrap.com/).
 
 
 ## Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-JSHint was used to check there were no errors or potential problems in the JavaScript code.
+<img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+
+JSHint was used to check there were no errors in the JavaScript code, while there may be some warnings after running the JS though JSHint, they are mainly that alot of the code is only available in ES6, but this was the code I was taught and there are no errors with the code, it works on all systems tested so I am keeping it with the ES6 version.
 
 ### Testing User Stories from User Experience (UX) Section
 
 - #### Site user goals
     1. As a site user, I want to navigate the site easily and understand what the site is offering.
-        -   Upon entering the site 
+        -   Upon entering the site there is a clear welcome explanation about the site and it's purpose. There are also clear navigational buttons throughout the site that are clear to understand and enable the site to be easy to navigate.
+
+        <img src="assets/images/screenshot1.png" style="margin: 0;">
     2. As a site user, I want to be entertained by the games on offer, they should be fully interactive and I should be able to see how I am doing at all times, as well as being told if I win or lose. 
-        -   The 
+        -   The memory card game is fully interactive, the game will only start when being 'clicked' by the user. Both levels have results boxes underneath which give the user clear updates on their 'Score' (how many cards they have paired correctly), their 'Moves' (how many times they have overturned a pair of cards to find the matches) and the 'Time' (they have 60 seconds to find all the matches). The user can see their prgress at all times, plus a message pops up when they win or lose the game.
+
+        <img src="assets/images/screenshot2.png" style="margin: 0;">
     3. As a site user, I want to be able to increase the difficulty of the game or make it more challanging by the use of levels or something.
-        -   The 
+        -   There are currently 2 levels to the memory card game. The user has the option to try the harder level 2, which has 8 pairs instead of 6 but the same time-limit. The cards also have their own unique theme so that it feels like a different gaming experience.
+
+        <img src="assets/images/screenshot3.png" style="margin: 0;">
 
 - #### Site owner goals
     1. As a site owner, I want to provide a clear website that is easy to navigate and read all text/info, with no distractions or broken links etc. 
-        -   The 
+        -   The site has clear navigational buttons throughout and has been thoughly tested to ensure the text is clear to read and all links work correctly.
     2. As a site owner, I want the games to be fun to play, but quite simple. I want the user to feel challenged but not frustrated.
-        -   The 
+        -   The memory card game is not complicated but is fun as it has a nostalgia element to it. One user that tested the site stated "I  like the memory game. Remids me of being a kid". the time limit ensures that the user feels challenged to locate all matched pairs in time, which is made more of a challenge in level 2.
     3. As a site owner, I want the games to be interactive and to provide feedback to the user. I want the difficulty to increase with the inclusion of a level 2, with the view to creating more games and more levels in the future.
-        -   The
+        -   The game is fully interactive with the users input; they are able to start the game when they want, flip which cards they want, restart the game and choose a different level. There is constant feedback with the result box displaying their score, moves and time taken. The difficulty is increased with level 2 having more cards to match but the same time-limit.
 
 ### Further Testing
 
@@ -111,12 +132,12 @@ JSHint was used to check there were no errors or potential problems in the JavaS
 -   A large amount of testing of the game functions was completed during developement. After every change the game was tested to ensure no new issues or bugs were located.
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues, they reported a success on all fronts.
 
-Problems that needed to be overcome:
+### Problems that needed to be overcome, these were tested over and over during the development and deployment process:
 
-- Matching the cards - used frameworks to name each card image and created code that checked the frame work names to know if the cards matched or not.
+- Matching the cards - used frameworks to name each card image and created code that checked the framework names to know if the cards matched or not.
 - The game timer function triggering with the first click only and not every time a card was clicked. Overcame with 'var firstClick = false' in app.js.
-- The board needed to be locked after clicking on the 2 cards to be 'flipped' or else a user could keep 'flipping' the cards before the match function could be executed, which is why a lockBoard variable was needed. Also needed to create a 'disableAllCards' funtion for when the game is won or lost so the user cant keep playing and needs to select to play again or a new level.
-- With the addition of a Level 2 the 'const cards' variable wasnt triggering for the level 2 cards, to overcome this a 'cards2' was created and another event listener. Another level 2 issues was that the number of pairs needed to completed the game had to be increased from 6 to 8, so a level1 or level2 ID was given and these targeted using 'getAttribute('id')' and 'levelOneMatches' and 'levelTwoMatches' variables created.
+- The board needed to be locked after clicking on the 2 cards to be 'flipped' or else a user could keep 'flipping' the cards before the match function could be executed, which is why a disableCards funtion was needed. Also needed to create a 'disableAllCards' funtion for when the game is won or lost so the user cant keep playing so they need to select to play again or a new level.
+- With the addition of a Level 2 the 'const cards' variable wasnt triggering for the level 2 cards, to overcome this a 'cards2' was created and another event listener. Another level 2 issue was that the number of pairs needed to completed the game had to be increased from 6 to 8, so a level1 or level2 ID was given and these targeted using 'getAttribute('id')' and 'levelOneMatches' and 'levelTwoMatches' variables created.
 - Issues with the site working on IOS mobile devices as the CSS wasnt loading correctly for the game, the cards wouldnt 'flip' correctly. Solved this by running the appropriate CSS through 'Autoprefixer' (as linked to above) and adding the webkit options to the code for IOS software.
 
 ## Known Bugs
@@ -173,7 +194,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ## Future maintainability
 
-The images used are stored in the assests/images folder for easy maintainability, the memory card game images are also divided into their own separate folder so it is clear which image relates to what. It will be simple to swap out or update pictures and the image locations in the HTML are clear.
+The images used are stored in the assests/images folder for easy maintainability, the memory card game images are also divided into their own separate folder so it is clear which image relates to what level. It will be simple to swap out or update pictures and the image locations in the HTML are clear.
 
 There is clear code commenting for each section of the HTML pages, which make it easy for developers to view for future maintenence. It makes changing the code/updating the details easier for other developers.
 
