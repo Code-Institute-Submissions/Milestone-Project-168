@@ -1,4 +1,4 @@
-<h1 align="center"><img src="assets/images/logo-2.png" style="margin: 0;"></h1>
+<h1 align="center"><img src="assets/images/logo-2.png" style="margin: 0;" alt="image of site logo"></h1>
 
 [View the live website here.](https://passion4film.github.io/Milestone-Project-2/)
 
@@ -50,13 +50,23 @@ Memory Card Level 2 page wireframe:
 
 <img src="wireframes/memory-game-level2.png" style="margin: 0;">
 
+The pages as shown on a tablet wireframes:
+
+<img src="wireframes/tablet-screens.png" style="margin: 0;">
+
 The pages as shown on a mobile wireframes:
 
 <img src="wireframes/mobile-screens.png" style="margin: 0;">
 
+(The game is designed to be played in portrait mode as this is the natural mode for mobile internet viewing)
+
 ## Features
 
--   Responsive on all device sizes.
+-   Responsive on all device sizes. E.g:
+
+<img src="screenshots/mock-up1.jpg" style="margin: 0;">
+
+<img src="screenshots/mock-up2.jpg" style="margin: 0;">
 
 -   Interactive memory card game, with more than 1 level.
 
@@ -67,7 +77,7 @@ The pages as shown on a mobile wireframes:
 -   Memory Card Level 2: this page is the second level of the memory card game. It also has the explanation of the memory card game and the rules/theme for level 2. The game grid and score/time box are in the same position but the game grid contains 4 more cards to make 8 total pairs, to increase the difficulty with the same time limit as level 1.
 
 ### Future Features
--   I would like to create and add more games using vanilla JavaScript, which is why I left a 'more games coming soon button' to let the users know that if they liked this site to keep coming back to see what new games will be added in the future. I did follow a online tutorial to create a 'Snake' game using JavaScript, however I didn't think it was necessary to add that to this website currently as I am not advanced enough yet to develop the basic game idea further and customize it. But in the future games like 'Snake' and 'Naughts & Crosses' could be added to the games inventory for this site.
+-   I would like to create and add more games using JavaScript, which is why I left a 'more games coming soon button' to let the users know that if they liked this site to keep coming back to see what new games will be added in the future. I did follow a online tutorial to create a 'Snake' game using JavaScript, however I didn't think it was necessary to add that to this website currently as I am not advanced enough yet to develop the basic game idea further and customize it. But in the future games like 'Snake' and 'Naughts & Crosses' could be added to the games inventory for this site.
 
 ## Technologies Used
 
@@ -84,12 +94,19 @@ The pages as shown on a mobile wireframes:
 -   [Responsinator:](http://www.responsinator.com/) Responsinator was used to check the site was responsive across all devices.
 -   [Balsamiq:](https://balsamiq.com/) Balsamiq was used to create the wireframes during the design process.
 -   [Autoprefixer CSS online](https://autoprefixer.github.io/) Autoprefixer was used to get the correct web extensions like -webkit- added to my CSS so that it worked on IOs systems.
+-   [Lighthouse](https://developers.google.com/web/tools/lighthouse)
 -   Chrome, Microsoft Edge & Firefox internet browsers.
 -   Adobe Photoshop, for the logo.
 -   I also made use of the [Bootstrap framework library](https://getbootstrap.com/).
 
 
 ## Testing
+
+### Manual Testing documentation
+
+[Please see the testing file](testing.md)
+
+### Validators
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
@@ -105,15 +122,15 @@ JSHint was used to check there were no errors in the JavaScript code, while ther
     1. As a site user, I want to navigate the site easily and understand what the site is offering.
         -   Upon entering the site there is a clear welcome explanation about the site and it's purpose. There are also clear navigational buttons throughout the site that are clear to understand and enable the site to be easy to navigate.
 
-        <img src="assets/images/screenshot1.png" style="margin: 0;">
+        <img src="screenshots/screenshot1.png" style="margin: 0;">
     2. As a site user, I want to be entertained by the games on offer, they should be fully interactive and I should be able to see how I am doing at all times, as well as being told if I win or lose. 
         -   The memory card game is fully interactive, the game will only start when being 'clicked' by the user. Both levels have results boxes underneath which give the user clear updates on their 'Score' (how many cards they have paired correctly), their 'Moves' (how many times they have overturned a pair of cards to find the matches) and the 'Time' (they have 60 seconds to find all the matches). The user can see their prgress at all times, plus a message pops up when they win or lose the game.
 
-        <img src="assets/images/screenshot2.png" style="margin: 0;">
+        <img src="screenshots/screenshot2.png" style="margin: 0;">
     3. As a site user, I want to be able to increase the difficulty of the game or make it more challanging by the use of levels or something.
         -   There are currently 2 levels to the memory card game. The user has the option to try the harder level 2, which has 8 pairs instead of 6 but the same time-limit. The cards also have their own unique theme so that it feels like a different gaming experience.
 
-        <img src="assets/images/screenshot3.png" style="margin: 0;">
+        <img src="screenshots/screenshot3.png" style="margin: 0;">
 
 - #### Site owner goals
     1. As a site owner, I want to provide a clear website that is easy to navigate and read all text/info, with no distractions or broken links etc. 
@@ -131,14 +148,12 @@ JSHint was used to check there were no errors in the JavaScript code, while ther
 -   A large amount of testing was done to ensure that all pages were linking correctly. This was done by frequently moving from one page by clicking the button links for all pages on all devices.
 -   A large amount of testing of the game functions was completed during developement. After every change the game was tested to ensure no new issues or bugs were located.
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues, they reported a success on all fronts.
+-   The website was tested on [Lighthouse](https://developers.google.com/web/tools/lighthouse) and achieved a high score on all issues:
 
-### Problems that needed to be overcome, these were tested over and over during the development and deployment process:
+    <img src="screenshots/lighthouse-desktop.jpg" style="margin: 0;">
+    <img src="screenshots/lighthouse-mobile.jpg" style="margin: 0;">
 
-- Matching the cards - used frameworks to name each card image and created code that checked the framework names to know if the cards matched or not.
-- The game timer function triggering with the first click only and not every time a card was clicked. Overcame with 'var firstClick = false' in app.js.
-- The board needed to be locked after clicking on the 2 cards to be 'flipped' or else a user could keep 'flipping' the cards before the match function could be executed, which is why a disableCards funtion was needed. Also needed to create a 'disableAllCards' funtion for when the game is won or lost so the user cant keep playing so they need to select to play again or a new level.
-- With the addition of a Level 2 the 'const cards' variable wasnt triggering for the level 2 cards, to overcome this a 'cards2' was created and another event listener. Another level 2 issue was that the number of pairs needed to completed the game had to be increased from 6 to 8, so a level1 or level2 ID was given and these targeted using 'getAttribute('id')' and 'levelOneMatches' and 'levelTwoMatches' variables created.
-- Issues with the site working on IOS mobile devices as the CSS wasnt loading correctly for the game, the cards wouldnt 'flip' correctly. Solved this by running the appropriate CSS through 'Autoprefixer' (as linked to above) and adding the webkit options to the code for IOS software.
+    You can use the Lighthouse Tool on any webpage by right clicking on the site, then 'inspect', then the two arrow button '>>' and 'Lighthouse'. You can select to test the site as a desktop version or mobile version and then click the blue 'Generate Report' which will provide you with the results in the screenshots provided above.
 
 ## Known Bugs
 
@@ -208,7 +223,7 @@ Online tutorials:
 
 - The initial game design and the CSS 'flip' animation, with the backface/frontface images, was taken from viewing the tutorial by Youtube user [freeCodeCamp.org](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=330s). However during the middle of the project mentor session, we refractored and simplified alot of the JavaScript code from this video so it doesnt match this exactly anymore, but the basic game did grow from this source.
 
-- The Function time() was taken from this online video created by Youtube user [codeTonight](https://www.youtube.com/watch?v=QrTCHHhoUQU)
+- The Function time() and inpiration for the updateMoves() was taken from online video created by Youtube user [codeTonight](https://www.youtube.com/watch?v=QrTCHHhoUQU)
 
 - I took some inspiration from these guides also; first by [Sandra Israel-Ovirih](https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript) and the second, also based on the first, by [Michelle Aniuchi](https://aadaobi.medium.com/building-a-memory-matching-game-in-javascript-48e792c7b563).
 
@@ -248,6 +263,6 @@ All photos used are stored in the assets folder (and in their own named folders)
 
 ## Acknowledgements
 
-I received inspiration for this project from the online tutorials and example websites credited above as well as help from my Mentor; Antonio Rodriguez.
+I received inspiration for this project from the online tutorials and example websites credited above as well as much appreciated help from my Mentor; Antonio Rodriguez.
 
 **DISCLAIMER: This project is for educational purposes only, no materials/files are intended for any commercial use**

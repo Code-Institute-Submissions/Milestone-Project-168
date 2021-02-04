@@ -12,7 +12,7 @@ const levelOneMatches = 6;
 const levelTwoMatches = 8;
 var timer;
 
-// Game funtions, to start the game, flip (or unflip), match cards & lock board
+// Game funtions, to start the game, flip (or unflip), match cards & disable the cards during each move and at the end of the game
 
 function startGame() {
     if (firstClick) {
@@ -53,6 +53,7 @@ function updateScore(score) {
     document.querySelector('#score').innerHTML = score;
 }
 
+// (basic concept for moves inspired by Youtube user [codeTonight](https://www.youtube.com/watch?v=QrTCHHhoUQU))
 function updateMoves() {
     var moves = document.querySelector('#moves').innerHTML;
     moves++;
@@ -121,7 +122,7 @@ function gamePlay() {
     }
 }
 
-// Shuffling the cards depending on level
+// Shuffling the cards depending on level (basic concept taken from Youtube user [freeCodeCamp.org](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=330s))
 
 (function shuffleLevel1() {
   cards.forEach(card => {
@@ -137,7 +138,7 @@ function gamePlay() {
   });
 })();
 
-// setting the time function - 60 seconds to finish the game
+// setting the time function - 60 seconds to finish the game, the basic funtion was taken from Youtube user [codeTonight](https://www.youtube.com/watch?v=QrTCHHhoUQU)
 
 function time() {
     var mins = 0;
