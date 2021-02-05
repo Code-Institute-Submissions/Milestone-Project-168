@@ -3,10 +3,10 @@
 [View the live website here.](https://passion4film.github.io/Milestone-Project-2/)
 
 # Procrast-A-Nation!
-I wanted to create a game website to provide some amusement and distraction for people who suffer from stress and bordom in their busy lives. I beleive it is sometimes easier to focus on the important work/studies if you acknowledge that some fun is necessary and create time and space to indulge in a bit of procrastination.
-All human beings can procratinate, therefore I decided to call my website a play on that word and the nation: Procrast-A-Nation.
+I wanted to create a game website to provide some amusement and distraction for people who suffer from stress and boredom in their busy lives. I believe it is sometimes easier to focus on the important work/studies if you acknowledge that some fun is necessary and create time and space to indulge in a bit of procrastination.
+All human beings can procrastinate, therefore I decided to call my website a play on that word and the nation: Procrast-A-Nation.
 
-So far the site consists of a Memory Card matching game, which has 2 levels. A memory card game is basically a grid of paired cards in a random order, face-down. The user needs to turn the cards over and match each pair to win. 
+So far, the site consists of a Memory Card matching game, which has 2 levels. A memory card game is basically a grid of paired cards in a random order, face-down. The user needs to turn the cards over and match each pair to win. 
 
 ## The important things to consider were:
 
@@ -22,7 +22,7 @@ So far the site consists of a Memory Card matching game, which has 2 levels. A m
 - #### Site user goals
     1. As a site user, I want to navigate the site easily and understand what the site is offering.
     2. As a site user, I want to be entertained by the games on offer, they should be fully interactive and I should be able to see how I am doing at all times, as well as being told if I win or lose.
-    3. As a site user, I want to be able to increase the difficulty of the game or make it more challanging by the use of levels or something.
+    3. As a site user, I want to be able to increase the difficulty of the game or make it more challenging by the use of levels or something.
 
 - #### Site owner goals
     1. As a site owner, I want to provide a clear website that is easy to navigate and read all text/info, with no distractions or broken links etc.
@@ -31,11 +31,11 @@ So far the site consists of a Memory Card matching game, which has 2 levels. A m
 
 -   ### Design
     -   #### Colour Scheme
-        -   The main colours used are blue and white, as these complement each other nicely. I also feel that blue is a calm and relaxed colour and thats the feel I want to encourage in the website; that this is a place to chill and not worry about time or work. I used a background image with a pattern as I feel that is more interesting than a plain coloured background. However, I chose a pattern that isnt 'busy' so as not to be distractng to the eye when playing the games.
+        -   The main colours used are blue and white, as these complement each other nicely. I also feel that blue is a calm and relaxed colour and thats the feel I want to encourage in the website; that this is a place to chill and not worry about time or work. I used a background image with a pattern as I feel that is more interesting than a plain coloured background. However, I chose a pattern that isnt 'busy' so as not to be distracting to the eye when playing the games.
     -   #### Typography
-        -   The Roberto Condensed font is used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Roberto Condensed is easy to read, attractive and appropriate to the asthetic of the site. The font colour throughout is white to make it stand-out and for ease of reading against the background.
+        -   The Roberto Condensed font is used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Roberto Condensed is easy to read, attractive and appropriate to the aesthetic of the site. The font colour throughout is white to make it stand-out and for ease of reading against the background.
     -   #### Imagery
-        -   I created the site logo using Adobe Photoshop and a stockphoto located online that I edited to suit my purpose. The images for the cards had to fit each theme, Marvel Characters for level 1 and travel pictures for level 2. The images had to be re-sized to be uniform and fit in the game-grid, they also had to be clear and of good quality so that the users were able to match them properly. 
+        -   I created the site logo using Adobe Photoshop and a stock photo located online that I edited to suit my purpose. The images for the cards had to fit each theme, Marvel Characters for level 1 and travel pictures for level 2. The images had to be re-sized to be uniform and fit in the game-grid, they also had to be clear and of good quality so that the users were able to match them properly. 
 
 ## Wireframes page designs:
 Home page wireframe:
@@ -62,7 +62,7 @@ The pages as shown on a mobile wireframes:
 
 ## Features
 
--   Responsive on all device sizes. E.g:
+-   Responsive on all device sizes. For example:
 
 <img src="screenshots/mock-up1.jpg" style="margin: 0;">
 
@@ -77,7 +77,7 @@ The pages as shown on a mobile wireframes:
 -   Memory Card Level 2: this page is the second level of the memory card game. It also has the explanation of the memory card game and the rules/theme for level 2. The game grid and score/time box are in the same position but the game grid contains 4 more cards to make 8 total pairs, to increase the difficulty with the same time limit as level 1.
 
 ### Future Features
--   I would like to create and add more games using JavaScript, which is why I left a 'more games coming soon button' to let the users know that if they liked this site to keep coming back to see what new games will be added in the future. I did follow a online tutorial to create a 'Snake' game using JavaScript, however I didn't think it was necessary to add that to this website currently as I am not advanced enough yet to develop the basic game idea further and customize it. But in the future games like 'Snake' and 'Naughts & Crosses' could be added to the games inventory for this site.
+-   I would like to create and add more games using JavaScript, which is why I left a 'more games coming soon button' to let the users know that if they liked this site to keep coming back to see what new games will be added in the future. I did follow a online tutorial to create a 'Snake' game using JavaScript, however I didn't think it was necessary to add that to this website currently as I am not advanced enough yet to develop the basic game idea further and customize it. But in the future games like 'Snake' and 'Noughts & Crosses' could be added to the games inventory for this site.
 
 ## Technologies Used
 
@@ -114,7 +114,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
         alt="Valid CSS!" />
 
-JSHint was used to check there were no errors in the JavaScript code, while there may be some warnings after running the JS though JSHint, they are mainly that alot of the code is only available in ES6, but this was the code I was taught and there are no errors with the code, it works on all systems tested so I am keeping it with the ES6 version.
+JSHint was used to check there were no errors in the JavaScript code, while there may be some warnings after running the JS though JSHint, they are mainly that a lot of the code is only available in ES6, but this was the code I was taught and there are no errors with the code, it works on all systems tested so I am keeping it with the ES6 version.
 
 ### Testing User Stories from User Experience (UX) Section
 
@@ -124,19 +124,19 @@ JSHint was used to check there were no errors in the JavaScript code, while ther
 
         <img src="screenshots/screenshot1.png" style="margin: 0;">
     2. As a site user, I want to be entertained by the games on offer, they should be fully interactive and I should be able to see how I am doing at all times, as well as being told if I win or lose. 
-        -   The memory card game is fully interactive, the game will only start when being 'clicked' by the user. Both levels have results boxes underneath which give the user clear updates on their 'Score' (how many cards they have paired correctly), their 'Moves' (how many times they have overturned a pair of cards to find the matches) and the 'Time' (they have 60 seconds to find all the matches). The user can see their prgress at all times, plus a message pops up when they win or lose the game.
+        -   The memory card game is fully interactive, the game will only start when being 'clicked' by the user. Both levels have results boxes underneath which give the user clear updates on their 'Score' (how many cards they have paired correctly), their 'Moves' (how many times they have overturned a pair of cards to find the matches) and the 'Time' (they have 60 seconds to find all the matches). The user can see their progress at all times, plus a message pops up when they win or lose the game.
 
         <img src="screenshots/screenshot2.png" style="margin: 0;">
-    3. As a site user, I want to be able to increase the difficulty of the game or make it more challanging by the use of levels or something.
+    3. As a site user, I want to be able to increase the difficulty of the game or make it more challenging by the use of levels or something.
         -   There are currently 2 levels to the memory card game. The user has the option to try the harder level 2, which has 8 pairs instead of 6 but the same time-limit. The cards also have their own unique theme so that it feels like a different gaming experience.
 
         <img src="screenshots/screenshot3.png" style="margin: 0;">
 
 - #### Site owner goals
     1. As a site owner, I want to provide a clear website that is easy to navigate and read all text/info, with no distractions or broken links etc. 
-        -   The site has clear navigational buttons throughout and has been thoughly tested to ensure the text is clear to read and all links work correctly.
+        -   The site has clear navigational buttons throughout and has been thoroughly tested to ensure the text is clear to read and all links work correctly.
     2. As a site owner, I want the games to be fun to play, but quite simple. I want the user to feel challenged but not frustrated.
-        -   The memory card game is not complicated but is fun as it has a nostalgia element to it. One user that tested the site stated "I  like the memory game. Remids me of being a kid". the time limit ensures that the user feels challenged to locate all matched pairs in time, which is made more of a challenge in level 2.
+        -   The memory card game is not complicated but is fun as it has a nostalgia element to it. One user that tested the site stated "I  like the memory game. Reminds  me of being a kid". the time limit ensures that the user feels challenged to locate all matched pairs in time, which is made more of a challenge in level 2.
     3. As a site owner, I want the games to be interactive and to provide feedback to the user. I want the difficulty to increase with the inclusion of a level 2, with the view to creating more games and more levels in the future.
         -   The game is fully interactive with the users input; they are able to start the game when they want, flip which cards they want, restart the game and choose a different level. There is constant feedback with the result box displaying their score, moves and time taken. The difficulty is increased with level 2 having more cards to match but the same time-limit.
 
@@ -146,7 +146,7 @@ JSHint was used to check there were no errors in the JavaScript code, while ther
 -   The website was viewed on a variety of devices such as Desktop, Laptop and a variety of iPhones & Android phones to check it loaded correctly.
 -   The website was tested on Responsinator to ensure responsiveness on all devices.
 -   A large amount of testing was done to ensure that all pages were linking correctly. This was done by frequently moving from one page by clicking the button links for all pages on all devices.
--   A large amount of testing of the game functions was completed during developement. After every change the game was tested to ensure no new issues or bugs were located.
+-   A large amount of testing of the game functions was completed during development. After every change the game was tested to ensure no new issues or bugs were located.
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues, they reported a success on all fronts.
 -   The website was tested on [Lighthouse](https://developers.google.com/web/tools/lighthouse) and achieved a high score on all issues:
 
@@ -165,25 +165,25 @@ No bugs have been located at the time of Deployment.
 
 The project was deployed to GitHub Pages using the following steps...
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Passion4film/Milestone-Project-1/)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Passion4film/Milestone-Project-2/)
 2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
     - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
 3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
 4. Under "Source", click the dropdown called "None" and select "Master Branch".
 5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com/Passion4film/Milestone-Project-1) in the "GitHub Pages" section.
+6. Scroll back down through the page to locate the now published site [link](https://github.com/Passion4film/Milestone-Project-2) in the "GitHub Pages" section.
 
 ### Forking the GitHub Repository
 
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Passion4film/Milestone-Project-1)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Passion4film/Milestone-Project-2)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. You should now have a copy of the original repository in your GitHub account.
 
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Passion4film/Milestone-Project-1)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Passion4film/Milestone-Project-2)
 2. Under the repository name, click "Clone or download".
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open Git Bash
@@ -191,13 +191,13 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-$ git clone https://github.com/Passion4film/Milestone-Project-1
+$ git clone https://github.com/Passion4film/Milestone-Project-2
 ```
 
 7. Press Enter. Your local clone will be created.
 
 ```
-$ git clone https://github.com/Passion4film/Milestone-Project-1
+$ git clone https://github.com/Passion4film/Milestone-Project-2
 > Cloning into `CI-Clone`...
 > remote: Counting objects: 10, done.
 > remote: Compressing objects: 100% (8/8), done.

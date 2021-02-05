@@ -71,7 +71,7 @@
 
     - Cards that match remain face-up and cards that dont match are 'unflipped' so their image is hidden again and then the user can try again.
 
-## Game timer funtion
+## Game timer function
 
 * Expected
 
@@ -143,3 +143,5 @@
 * Fix
 
     - Solved this by running the appropriate CSS through 'Autoprefixer' (as linked to in README) and adding the webkit options to the code for IOS software.
+
+[Return to README](README.md)
